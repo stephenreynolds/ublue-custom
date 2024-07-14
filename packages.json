@@ -3,6 +3,14 @@
         "onedrive"
     ],
     "exclude": [
+        "gnome-shell-extension-caffeine",
+        "gnome-shell-extension-dash-to-dock",
+        "gnome-shell-extension-logo-menu",
+        "gnome-shell-extension-search-light",
+        "gnome-shell-extension-tailscale-gnome-qs",
+        "input-leap",
+        "input-remapper",
+        "libratbag-ratbagd",
         "solaar",
         "tailscale",
         "zsh"
