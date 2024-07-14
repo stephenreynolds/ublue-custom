@@ -1,0 +1,10 @@
+{
+    "include": [
+        "onedrive"
+    ],
+    "exclude": [
+        "solaar",
+        "tailscale",
+        "zsh"
+    ]
+}
