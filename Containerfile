@@ -48,10 +48,11 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY build.sh /tmp/build.sh
+COPY build_files /tmp/build/
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
+    bash -c ". /tmp/build/build.sh" && \
+    rm -rf /tmp/* && \
     ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
