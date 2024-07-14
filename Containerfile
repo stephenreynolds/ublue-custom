@@ -138,3 +138,14 @@ RUN rpm-ostree install \
     sed -i 's@"dxvk.conf"@"/usr/share/latencyflex/dxvk.conf"@g' /usr/bin/latencyflex && \
     chmod +x /usr/bin/latencyflex && \
     ostree container commit
+
+# Install Gamescope and Waydroid
+RUN rpm-ostree install \
+        gamescope.x86_64 \
+        gamescope-libs.i686 \
+        gamescope-shaders \
+        waydroid \
+        cage \
+        wlr-randr && \
+    sed -i~ -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' /usr/lib/waydroid/data/scripts/waydroid-net.sh && \
+    ostree container commit
