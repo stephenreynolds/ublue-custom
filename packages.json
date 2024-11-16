@@ -10,9 +10,6 @@
         "gnome-shell-extension-tailscale-gnome-qs",
         "input-leap",
         "input-remapper",
-        "libratbag-ratbagd",
-        "solaar",
-        "tailscale",
-        "zsh"
+        "tailscale"
     ]
 }
