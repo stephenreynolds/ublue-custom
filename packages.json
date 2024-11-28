@@ -1,6 +1,8 @@
 {
     "include": [
-        "onedrive"
+        "hyprland",
+        "kitty",
+        "onedrive",
     ],
     "exclude": [
         "gnome-classic-session",
