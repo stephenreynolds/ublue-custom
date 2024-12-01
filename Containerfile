@@ -50,6 +50,11 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
+# Setup Copr repos
+RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
+    curl -Lo /etc/yum.repos.d/_copr_solopasha-hyprland.repo https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-"${FEDORA_MAJOR_VERSION}"/solopasha-hyprland-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
+    ostree container commit
+
 COPY build_files /tmp/build/
 COPY just /tmp/just
 COPY packages.json /tmp/packages.json
