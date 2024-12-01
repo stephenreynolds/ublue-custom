@@ -2,7 +2,13 @@
     "include": [
         "hyprland",
         "kitty",
-        "onedrive"
+        "onedrive",
+        "cliphist",
+        "grimblast",
+        "swappy",
+        "swww",
+        "tesseract",
+        "wl-clipboard"
     ],
     "exclude": [
         "gnome-classic-session",
